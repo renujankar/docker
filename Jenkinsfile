@@ -7,8 +7,8 @@ pipeline {
                      steps {
                          /* sh "yum install docker -y"
                           sh "systemctl start docker"*/
-                          /* sh "systemctl status docker"
-                           sh "systemctl enable docker"*/
+                           sh "sudo systemctl status docker"
+                           //sh "systemctl enable docker"//
                      }
                 }
                   stage ('stage-2') {
