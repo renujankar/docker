@@ -13,7 +13,7 @@ pipeline {
                 }
                   stage ('stage-2') {
                            steps {
-                              sh "sudo yum install git -y"
+                             // sh "sudo yum install git -y"//
                               sh "sudo cd /mnt"
                               sh "sudo git clone https://github.com/renujankar/docker.git"
                               sh "sudo cd "
