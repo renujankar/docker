@@ -5,10 +5,10 @@ pipeline {
           stages {
                stage ('stage-1') {
                      steps {
-                          sh "yum install docker -y"
-                           sh "systemctl start docker"
-                           sh "systemctl status docker"
-                           sh "systemctl enable docker"
+                          sh " sudo yum install docker -y"
+                           sh "sudo systemctl start docker"
+                           sh "sudo systemctl status docker"
+                           sh "sudo systemctl enable docker"
                      }
                 }
                   stage ('stage-2') {
