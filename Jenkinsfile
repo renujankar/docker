@@ -16,7 +16,7 @@ pipeline {
                               sh "docker rm 23Q2"
                               sh "docker system prune -a -f"
                               sh "docker run -itdp 90:80 --name 23Q2 -v /mnt:/usr/local/apache2/htdocs httpd "
-                             // sh "docker cp index.html 23Q2:/usr/local/apache2/htdocs"//
+                              sh "docker cp index.html 23Q2:/usr/local/apache2/htdocs"
                               sh "docker exec 23Q2 chmod -R 777 /usr/local/apache2/"
                            }
                   }
