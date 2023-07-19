@@ -11,9 +11,9 @@ pipeline {
                 }
                   stage ('stage-2') {
                            steps {
-                              /*sh "docker pull httpd" 
+                              sh "docker pull httpd" 
                               sh "docker stop 23Q1"
-                              sh "docker rm 23Q1"*/ 
+                              sh "docker rm 23Q1"
                               sh "docker system prune -a -f"
                               sh "docker run -itdp 80:80 --name 23Q1 -v /mnt/docker/index.html:/usr/local/apache2/htdocs httpd "
                              // sh "docker cp index.html 23Q1:/usr/local/apache2/htdocs"//
