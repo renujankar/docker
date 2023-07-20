@@ -15,8 +15,8 @@ pipeline {
                               //sh "git clone https://github.com/renujankar/docker.git"//
                               //sh "cd "//
                               //sh "docker pull httpd"//
-                              sh "docker stop 23Q1"
-                              sh "docker rm 23Q1"
+                              //sh "docker stop 23Q1"//
+                             //sh "docker rm 23Q1"//
                               sh "docker system prune -a -f"
                               sh "docker run -itd --name 23Q1 -p 80:80 -v /mnt:/usr/local/apache2/htdocs httpd "
                               //sh "docker run -itdp 8000:80 --name 23Q1 httpd"//
