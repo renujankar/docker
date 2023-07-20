@@ -21,7 +21,7 @@ pipeline {
                               sh "docker run -itd --name 23Q1 -p 80:80 -v /mnt:/usr/local/apache2/htdocs httpd "
                               //sh "docker run -itdp 8000:80 --name 23Q1 httpd"//
                               sh "docker cp index.html 23Q1:/usr/local/apache2/htdocs"
-                              sh "docker exec 23Q1-1 chmod -R 777 /usr/local/apache2/"
+                              sh "docker exec 23Q1 chmod -R 777 /usr/local/apache2/"
                            }
                   }
                 
