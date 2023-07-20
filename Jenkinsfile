@@ -1,5 +1,5 @@
 pipeline {
-      agent 
+      agent any
           stages {
                stage ('stage-1') {
                      steps {
@@ -12,8 +12,8 @@ pipeline {
                   stage ('stage-2') {
                            steps {
                               //sh "docker pull httpd"// 
-                              /*sh "docker stop 23Q3"
-                              sh "docker rm 23Q3"*/
+                             / /*sh "docker stop 23Q3"//
+                             // sh "docker rm 23Q3"*//
                               sh "docker system prune -a -f"
                               sh "docker run -itd --name 23Q3 -p 8081:80 -v /mnt:/usr/local/apache2/htdocs httpd"
                              // sh "docker run -itdp 8083:80 --name 23Q3-3 httpd"//
